@@ -77,10 +77,36 @@ alarm[POWERUP_ALARM] = room_speed * random_range(10, 15)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Spawn enemy
-var enemy = choose(o_enemy_one, o_enemy_two)
+            <string>/// Spawn the enemies
+var enemy = o_enemy_one
+var alarm_time = room_speed * random_range(.5, 2)
+
+
+// Increase the difficulty
+if (score &gt;= 100) {
+    enemy = choose(o_enemy_one, o_enemy_one, o_enemy_two)
+    alarm_time = room_speed * random_range(.25, 1.5)
+}
+
+// Increase the difficulty
+if (score &gt;= 200) {
+    enemy = choose(o_enemy_one, o_enemy_two)
+    alarm_time = room_speed * random_range(.25, 1)
+}
+
+// Increase the difficulty
+if (score &gt;= 300) {
+    enemy = choose(o_enemy_one, o_enemy_two, o_enemy_two)
+    alarm_time = room_speed * random_range(.20, 0.9)
+}
+
+
+
+// Create the enemy
 instance_create(irandom_range(16, room_width-16), -16, enemy)
-alarm[SPAWNER_ALARM] = room_speed * random_range(.5, 2)
+
+// Restart the alarm
+alarm[SPAWNER_ALARM] = alarm_time
 </string>
           </argument>
         </arguments>
