@@ -46,6 +46,7 @@
     <object>objects\o_start_button</object>
     <object>objects\o_menu_button</object>
     <object>objects\o_quit_button</object>
+    <object>objects\o_screen_flash</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_menu</room>
