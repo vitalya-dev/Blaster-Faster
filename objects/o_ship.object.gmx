@@ -3,7 +3,7 @@
   <spriteName>s_ship</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -102,8 +102,8 @@ laser_powerup = false
           <argument>
             <kind>1</kind>
             <string>/// Create the laser
-instance_create(x+12, y, o_laser)
-instance_create(x-12, y, o_laser)
+instance_create(x+12, y-8, o_laser)
+instance_create(x-12, y-8, o_laser)
 
 
 // Reset the alarm

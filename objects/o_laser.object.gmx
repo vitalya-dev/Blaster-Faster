@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>/// Initialize the laser object
 vspeed = -8
+instance_create(x, y, o_flare)
+
 
 </string>
           </argument>
@@ -53,6 +55,9 @@ vspeed = -8
             <string>/// Hit the enemy
 other.armor -= 1
 instance_destroy()
+
+// Show flare effect
+instance_create(x, y, o_flare)
 
 </string>
           </argument>

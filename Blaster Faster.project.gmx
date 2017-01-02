@@ -17,6 +17,7 @@
     <sprite>sprites\s_armor_powerup</sprite>
     <sprite>sprites\s_laser_powerup</sprite>
     <sprite>sprites\s_button</sprite>
+    <sprite>sprites\s_flare</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\b_stars_far</background>
@@ -51,6 +52,7 @@
     <object>objects\o_quit_button</object>
     <object>objects\o_screen_flash</object>
     <object>objects\o_view_controller</object>
+    <object>objects\o_flare</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_menu</room>
