@@ -77,6 +77,10 @@ if (y &gt; room_height + 7) {
             <kind>1</kind>
             <string>/// Colide with player ship.
 instance_destroy()
+
+// Play powerup sound
+audio_play_sound(a_powerup, 7, false)
+
 </string>
           </argument>
         </arguments>

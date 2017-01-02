@@ -29,6 +29,8 @@
 image_angle = random(360)
 image_alpha = .8
 
+// Play explode sound
+audio_play_sound(a_explode, 7, false)
 
 </string>
           </argument>

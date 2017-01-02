@@ -29,6 +29,9 @@
 vspeed = -8
 instance_create(x, y, o_flare)
 
+// Play laser sound
+audio_play_sound(a_laser, 5, false)
+
 
 </string>
           </argument>
@@ -58,6 +61,9 @@ instance_destroy()
 
 // Show flare effect
 instance_create(x, y, o_flare)
+
+// Play hit sound
+audio_play_sound(a_hit, 5, false)
 
 </string>
           </argument>

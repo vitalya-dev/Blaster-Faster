@@ -29,6 +29,8 @@
 vspeed = 4
 instance_create(x, y, o_flare)
 
+// Play laser sound
+audio_play_sound(a_enemy_laser, 5, false)
 </string>
           </argument>
         </arguments>
@@ -63,6 +65,9 @@ add_screenshake(5, room_speed)
 
 // Show flare effect
 instance_create(x, y, o_flare)
+
+// Play hit sound
+audio_play_sound(a_ship_hit, 6, false)
 </string>
           </argument>
         </arguments>

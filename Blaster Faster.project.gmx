@@ -4,7 +4,15 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\a_powerup</sound>
+    <sound>sound\a_ship_hit</sound>
+    <sound>sound\a_space_music</sound>
+    <sound>sound\a_enemy_laser</sound>
+    <sound>sound\a_explode</sound>
+    <sound>sound\a_hit</sound>
+    <sound>sound\a_laser</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_ship</sprite>
     <sprite>sprites\s_laser</sprite>
