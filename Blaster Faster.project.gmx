@@ -23,6 +23,9 @@
     <background>background\b_stars_close</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\add_screenshake.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\f_score</font>
   </fonts>
@@ -47,6 +50,7 @@
     <object>objects\o_menu_button</object>
     <object>objects\o_quit_button</object>
     <object>objects\o_screen_flash</object>
+    <object>objects\o_view_controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_menu</room>
