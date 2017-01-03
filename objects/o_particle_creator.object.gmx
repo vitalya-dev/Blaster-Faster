@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="1" enumb="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,10 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Making an explosion after death
-if (armor &lt;= 0) {
-    create_explosion(x, y)
-}
+            <string>/// Initialize the particle creator
+speed = random_range(1, 5)
+friction = .25
+direction = random(360)
+
+
 </string>
           </argument>
         </arguments>
@@ -51,47 +53,27 @@ if (armor &lt;= 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Control the enemy
-if (y &gt; room_height + 16) {
+            <string>/// Create the particles and die
+if (speed == 0) {
     instance_destroy()
 }
 
-// Die code
-if (armor &lt;= 0) {
-    instance_destroy()
-    
-    score += 5
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="o_ship">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Damage the ship
-other.armor -= 1
-armor = 0
+// Create the flare particles
+part_particles_create(
+    o_game.system, x-4+random(8), 
+    y-4+random(8), o_game.pt_flare, 
+    1
+)
 
-// Show flash effect
-instance_create(0, 0, o_screen_flash)
+// Create the flare particles
+if (speed &gt; 2) {
+    part_particles_create(
+        o_game.system, x-8+random(16), 
+        y-8+random(16), o_game.pt_smoke, 1
+    )
+} 
 
-
+ 
 </string>
           </argument>
         </arguments>

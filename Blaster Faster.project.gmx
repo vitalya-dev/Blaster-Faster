@@ -26,6 +26,7 @@
     <sprite>sprites\s_laser_powerup</sprite>
     <sprite>sprites\s_button</sprite>
     <sprite>sprites\s_flare</sprite>
+    <sprite>sprites\s_smoke</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\b_stars_far</background>
@@ -34,6 +35,8 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\add_screenshake.gml</script>
+    <script>scripts\create_part_type_sprite.gml</script>
+    <script>scripts\create_explosion.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_score</font>
@@ -61,6 +64,7 @@
     <object>objects\o_screen_flash</object>
     <object>objects\o_view_controller</object>
     <object>objects\o_flare</object>
+    <object>objects\o_particle_creator</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_menu</room>

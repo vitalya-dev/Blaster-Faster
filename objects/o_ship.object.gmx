@@ -52,7 +52,7 @@ laser_powerup = false
           <argument>
             <kind>1</kind>
             <string>/// Create the explosion and menu button
-instance_create(x, y, o_explosion_center)
+create_explosion(x, y)
 instance_create(room_width/2, room_height/2, o_menu_button) 
 </string>
           </argument>
